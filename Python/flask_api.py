@@ -87,7 +87,7 @@ def calcular():
 
             wait.until(lambda d: d.execute_script('return document.readyState') == 'complete')
 
-            # Pegando a primeira ocorrência com XPath e :nth-of-type()
+            # Pegando a primeira ocorrência com XPath e nth-of-type()
             valor_atualizado_elemento = driver.find_element(By.XPATH, "(//p[b[contains(text(),'Valor atualizado')]])[1]")
             # Extraindo o valor
             valor_atualizado = valor_atualizado_elemento.text.split("R$")[1].strip()
